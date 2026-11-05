@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f5ef" />
+    <meta name="description" content="Ghé xem những món đồ hay ho tại Shop của Trọng. Đây là giao diện trưng bày mẫu." />
+    <title>Shop của Trọng — Đồ hay ho mỗi ngày</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Shop của Trọng - Trang chủ"><span class="brand-mark">T.</span><span>shop của Trọng</span></a>
+      <nav aria-label="Điều hướng chính"><a href="#san-pham">Sản phẩm</a><a href="#ve-shop">Về shop</a></nav>
+      <span class="header-note"><i></i> Góc đồ hay ho</span>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span>✳</span> CHỌN MÓN BẠN THÍCH</p>
+          <h1>Đồ hay ho,<br />cho ngày <em>thêm vui.</em></h1>
+          <p class="hero-description">Một góc nhỏ gom những món đồ tiện dụng và thú vị. Dạo quanh xem thử nhé!</p>
+          <a class="button" href="#san-pham">Khám phá sản phẩm <span>↘</span></a>
+          <p class="hero-footnote"><span>✿　☻　✳</span> Những món đồ nhỏ, niềm vui to</p>
+        </div>
+        <div class="hero-art" role="img" aria-label="Minh họa túi đồ nhiều màu sắc">
+          <div class="sun"></div><div class="art-label">GOOD<br />THINGS<br /><b>INSIDE</b></div>
+          <div class="bag"><span>✳</span><small>little<br />finds</small></div>
+          <span class="flower flower-left">✿</span><span class="flower flower-right">✿</span>
+          <span class="spark">✦</span><span class="art-caption">mỗi ngày<br />một điều vui</span>
+        </div>
+      </section>
+
+      <section class="catalog section-wrap" id="san-pham" aria-labelledby="catalog-title">
+        <div class="catalog-heading">
+          <div><p class="eyebrow">GIAN HÀNG NHỎ</p><h2 id="catalog-title">Có gì hay hôm nay?</h2></div>
+          <p>Lọc một chút, biết đâu tìm được món hợp gu.</p>
+        </div>
+        <div class="catalog-controls">
+          <div class="categories" role="group" aria-label="Lọc theo danh mục">
+            <button class="category-button active" type="button" data-category="Tất cả" aria-pressed="true">Tất cả</button>
+            <button class="category-button" type="button" data-category="Đồ dùng" aria-pressed="false">Đồ dùng</button>
+            <button class="category-button" type="button" data-category="Phụ kiện" aria-pressed="false">Phụ kiện</button>
+            <button class="category-button" type="button" data-category="Trang trí" aria-pressed="false">Trang trí</button>
+            <button class="category-button" type="button" data-category="Khác" aria-pressed="false">Khác</button>
+          </div>
+          <label class="search-box"><span aria-hidden="true">⌕</span><span class="visually-hidden">Tìm sản phẩm</span><input id="product-search" type="search" placeholder="Tìm món đồ..." autocomplete="off" /><kbd>/</kbd></label>
+        </div>
+        <div class="catalog-meta"><p id="result-count" aria-live="polite"></p><span>ⓘ Hình ảnh và sản phẩm bên dưới chỉ là nội dung mẫu</span></div>
+        <div class="product-grid" id="product-grid"></div>
+        <div class="empty-state" id="empty-state" hidden><span>⌕</span><h3>Chưa tìm thấy món này</h3><p>Thử từ khóa khác hoặc chọn danh mục khác nhé.</p></div>
+      </section>
+
+      <section class="about section-wrap" id="ve-shop">
+        <div class="about-mark">T.</div>
+        <div><p class="eyebrow">CHÀO BẠN, MÌNH LÀ TRỌNG</p><h2>Một chiếc shop<br />đang được chuẩn bị.</h2>
+          <p class="about-description">Đây là bản trưng bày giao diện ban đầu. Danh sách sản phẩm, hình ảnh và giá hiện tại chỉ để minh họa — hãy thay bằng thông tin thật trước khi giới thiệu shop đến khách hàng.</p>
+        </div>
+        <div class="sticker">đang<br />lên kệ <b>✳</b></div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <a class="brand" href="#"><span class="brand-mark">T.</span><span>shop của Trọng</span></a>
+      <p>Ghé xem cho vui · Nội dung sản phẩm hiện là bản mẫu</p><a class="back-top" href="#" aria-label="Lên đầu trang">↑</a>
+    </footer>
+  </body>
+</html>
