@@ -43,21 +43,17 @@ h1 em { color: #738264; font-style: normal; }
 .button:hover { transform: translateY(-2px); background: #344a34; }
 .hero-footnote { margin: 32px 0 0; color: #7d7e74; font-size: 10px; }
 .hero-footnote span { margin-right: 9px; color: #879b7a; font-size: 15px; }
-.hero-art { position: relative; min-height: 500px; overflow: hidden; background: #dce4d1; }
-.hero-art::after { position: absolute; right: -10%; bottom: -16%; left: -10%; height: 45%; border-radius: 50% 50% 0 0; background: #ced9c2; content: ""; }
-.sun { position: absolute; top: 48px; right: 68px; width: 126px; height: 126px; border-radius: 50%; background: #f0c77e; }
-.art-label { position: absolute; z-index: 1; top: 43px; left: 35px; color: #617255; font-family: "Manrope", sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1px; line-height: 1.35; }
-.art-label b { color: #c07557; }
-.bag { position: absolute; z-index: 1; top: 132px; left: 34%; width: 205px; height: 258px; padding-top: 72px; transform: rotate(-7deg); border-radius: 18px 18px 34px 34px; background: #c97b5e; box-shadow: 16px 21px 0 #b86950; color: #f6e8d8; text-align: center; }
-.bag::before { position: absolute; top: -50px; left: 61px; width: 80px; height: 90px; border: 12px solid #b96d53; border-bottom: 0; border-radius: 45px 45px 0 0; content: ""; }
-.bag span { display: block; font-size: 38px; }
-.bag small { display: block; margin-top: 8px; font-family: "Manrope", sans-serif; font-size: 18px; font-weight: 700; line-height: 1.15; }
-.flower, .spark, .art-caption { position: absolute; z-index: 2; }
-.flower { color: #f9f4e8; text-shadow: 0 2px #d9cdb8; }
-.flower-left { top: 228px; left: 50px; color: #e4a178; font-size: 57px; }
-.flower-right { right: 55px; bottom: 76px; font-size: 82px; }
-.spark { top: 94px; left: 48%; color: #fff; font-size: 28px; }
-.art-caption { right: 36px; bottom: 39px; color: #718067; font-size: 10px; line-height: 1.5; text-align: right; }
+.hero-art { position: relative; min-height: 500px; overflow: hidden; background: #17252d; }
+.hero-art::after { position: absolute; right: -10%; bottom: -24%; left: -10%; height: 48%; border-radius: 50% 50% 0 0; background: #21343a; content: ""; }
+.art-label { position: absolute; z-index: 2; top: 43px; left: 35px; color: #d6e5dd; font-family: "Manrope", sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1px; line-height: 1.35; }
+.art-label b { color: #7fd3b0; }
+.coin { position: absolute; z-index: 1; display: grid; place-items: center; border: 1px solid #ffffff3d; border-radius: 50%; box-shadow: inset 0 0 0 9px #ffffff12, 0 18px 36px #07111666; font-family: "Manrope", sans-serif; font-weight: 700; }
+.coin-bitcoin { top: 130px; left: 25%; width: 190px; height: 190px; transform: rotate(-12deg); background: linear-gradient(145deg, #f8bc54, #b9751d); color: #fff3da; font-size: 104px; }
+.coin-ethereum { top: 225px; left: 56%; width: 135px; height: 135px; transform: rotate(9deg); background: linear-gradient(145deg, #8595c9, #475a86); color: #e0e6fa; font-size: 70px; }
+.coin-stable { top: 94px; right: 12%; width: 80px; height: 80px; background: linear-gradient(145deg, #63c6a0, #23816b); color: #e2fff4; font-size: 42px; }
+.spark, .art-caption { position: absolute; z-index: 2; }
+.spark { top: 164px; right: 17%; color: #e4c784; font-size: 28px; }
+.art-caption { right: 36px; bottom: 39px; color: #b7c8c0; font-size: 10px; line-height: 1.5; text-align: right; }
 
 .section-wrap { width: min(1120px, calc(100% - 64px)); margin-right: auto; margin-left: auto; }
 .catalog { padding: 105px 0; }
@@ -82,18 +78,19 @@ h1 em { color: #738264; font-style: normal; }
 .product-card { min-width: 0; animation: rise-in 380ms both; animation-delay: var(--delay); }
 @keyframes rise-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 .product-image { position: relative; height: 235px; display: grid; place-items: center; overflow: hidden; border-radius: 5px; }
-.image-mint { background: #dce9df; } .image-peach { background: #f3e0d1; } .image-butter { background: #f2e8c9; } .image-lilac { background: #e4deef; }
-.image-blue { background: #dce7ec; } .image-pink { background: #f2dfe1; } .image-sage { background: #e2e8d6; } .image-lavender { background: #e7e3ef; }
+.image-bitcoin { background: #f5e5ca; } .image-ethereum { background: #e3e6f1; } .image-tether { background: #dcece3; } .image-usdc { background: #dce8f3; }
+.image-solana { background: #e8e0f1; } .image-bnb { background: #f2e9ca; } .image-xrp { background: #e5e8eb; } .image-ton { background: #dce9f2; }
 .product-tag { position: absolute; z-index: 2; top: 12px; left: 12px; padding: 6px 8px; border-radius: 3px; background: #fffefa; color: #676a5d; font-size: 9px; font-weight: 600; }
-.product-illustration { position: relative; z-index: 1; width: 124px; height: 146px; display: grid; place-items: center; border-radius: 30px 30px 38px 38px; background: #a4b99e; box-shadow: 10px 12px 0 #829a7e; color: #f5f4ea; font-size: 62px; transition: transform 220ms ease; }
+.product-illustration { position: relative; z-index: 1; width: 132px; height: 132px; display: grid; place-items: center; border: 1px solid #ffffff70; border-radius: 50%; background: #a4b99e; box-shadow: inset 0 0 0 7px #ffffff24, 0 12px 18px #1a1e2230; color: #f5f4ea; font-size: 62px; font-weight: 700; transition: transform 220ms ease; }
 .product-card:hover .product-illustration { transform: translateY(-5px) rotate(-3deg); }
-.image-peach .product-illustration { width: 145px; height: 125px; border-radius: 13px 13px 25px 25px; background: #ce8b6c; box-shadow: 8px 10px 0 #b9775a; }
-.image-butter .product-illustration { width: 100px; height: 136px; border-radius: 42px 42px 17px 17px; background: #e3b963; box-shadow: 8px 10px 0 #cc9f4f; }
-.image-lilac .product-illustration { width: 100px; height: 162px; border: 7px solid #f8f6f1; border-radius: 21px; background: #b6a9cc; box-shadow: 5px 8px 0 #a194b8; }
-.image-blue .product-illustration { width: 139px; height: 104px; border-radius: 12px; background: #9eb4bd; box-shadow: 7px 9px 0 #819ca5; }
-.image-pink .product-illustration { width: 133px; height: 133px; border-radius: 50%; background: #d28a91; box-shadow: 7px 9px 0 #bd737e; }
-.image-sage .product-illustration { width: 110px; height: 95px; margin-top: 42px; border-radius: 13px 13px 30px 30px; background: #c58464; box-shadow: 7px 9px 0 #aa6d52; }
-.image-lavender .product-illustration { width: 125px; height: 110px; border-radius: 50%; background: #a89cbe; box-shadow: 7px 9px 0 #9488ab; }
+.image-bitcoin .product-illustration { background: linear-gradient(145deg, #f6bd59, #bd791f); }
+.image-ethereum .product-illustration { background: linear-gradient(145deg, #8998ca, #4a5b88); }
+.image-tether .product-illustration { background: linear-gradient(145deg, #59b997, #277b66); }
+.image-usdc .product-illustration { background: linear-gradient(145deg, #72a9e3, #3974bd); }
+.image-solana .product-illustration { background: linear-gradient(145deg, #8b74c4, #478b8c); }
+.image-bnb .product-illustration { background: linear-gradient(145deg, #f3c94b, #be8f19); }
+.image-xrp .product-illustration { background: linear-gradient(145deg, #727a82, #41474e); }
+.image-ton .product-illustration { background: linear-gradient(145deg, #79b9e8, #3786bd); }
 .decoration { position: absolute; color: #fffefa9e; }
 .decoration-one { top: 63px; right: 39px; font-size: 21px; } .decoration-two { bottom: 43px; left: 34px; font-size: 25px; }
 .sample-label { position: absolute; right: 10px; bottom: 9px; color: #76766d; font-size: 8px; }
@@ -125,7 +122,9 @@ h1 em { color: #738264; font-style: normal; }
 
 @media (max-width: 850px) {
   .hero, .hero-art { min-height: 430px; }
-  .bag { left: 29%; transform: scale(.82) rotate(-7deg); transform-origin: center; }
+  .coin-bitcoin { left: 21%; transform: scale(.82) rotate(-12deg); transform-origin: center; }
+  .coin-ethereum { left: 54%; transform: scale(.82) rotate(9deg); transform-origin: center; }
+  .coin-stable { right: 8%; transform: scale(.82); }
   .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 16px; }
   .product-image { height: clamp(185px, 32vw, 260px); }
   .sticker { right: 5%; opacity: .75; }
@@ -141,11 +140,12 @@ h1 em { color: #738264; font-style: normal; }
   .hero-description { max-width: 330px; font-size: 12px; }
   .hero-footnote { margin-top: 24px; }
   .hero-art { min-height: 320px; }
-  .sun { top: 28px; right: 35px; width: 92px; height: 92px; }
-  .bag { top: 91px; left: 30%; transform: scale(.71) rotate(-7deg); transform-origin: top left; }
-  .art-label { top: 24px; left: 23px; font-size: 10px; }
-  .flower-left { top: 143px; left: 22px; font-size: 41px; }
-  .flower-right { right: 22px; bottom: 36px; font-size: 58px; }
+  .coin-bitcoin { top: 104px; left: 16%; width: 154px; height: 154px; transform: rotate(-12deg); }
+  .coin-bitcoin { font-size: 82px; }
+  .coin-ethereum { top: 185px; left: 54%; width: 111px; height: 111px; transform: rotate(9deg); font-size: 58px; }
+  .coin-stable { top: 66px; right: 8%; width: 66px; height: 66px; font-size: 34px; }
+  .art-label { top: 22px; left: 23px; font-size: 10px; }
+  .spark { top: 150px; right: 15%; }
   .art-caption { right: 20px; bottom: 17px; }
   .section-wrap { width: calc(100% - 36px); }
   .catalog { padding: 70px 0 65px; }

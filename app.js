@@ -1,13 +1,13 @@
-// Replace this sample catalog with the shop's real products before publishing.
+// Examples only. Replace with assets actually supported by the agency.
 const products = [
-  { name: "Bình giữ nhiệt Mầm Xanh", category: "Đồ dùng", price: "189.000đ", description: "Bình nước nhỏ gọn, đồng hành cùng bạn cả ngày.", color: "mint", icon: "◒", tag: "Món xinh" },
-  { name: "Túi vải Đi Muôn Nơi", category: "Phụ kiện", price: "129.000đ", description: "Túi vải nhẹ nhàng cho những chuyến đi gần xa.", color: "peach", icon: "▱", tag: "Dùng mỗi ngày" },
-  { name: "Đèn ngủ Nắng Muộn", category: "Trang trí", price: "245.000đ", description: "Một ánh đèn ấm áp cho góc phòng thêm dịu dàng.", color: "butter", icon: "☼", tag: "Góc nhỏ" },
-  { name: "Ốp lưng Sắc Màu", category: "Phụ kiện", price: "99.000đ", description: "Thêm chút sắc màu vui mắt cho chiếc điện thoại.", color: "lilac", icon: "▯", tag: "Món xinh" },
-  { name: "Khay đựng Lặt Vặt", category: "Đồ dùng", price: "79.000đ", description: "Gom chìa khóa, kẹp tóc và những món nho nhỏ.", color: "blue", icon: "⌑", tag: "Gọn gàng" },
-  { name: "Bộ sticker Ngày Vui", category: "Khác", price: "39.000đ", description: "Những hình dán vui vui cho sổ tay và laptop.", color: "pink", icon: "✿", tag: "Dễ thương" },
-  { name: "Chậu cây Bé Xíu", category: "Trang trí", price: "115.000đ", description: "Điểm xanh nho nhỏ cho bàn làm việc thêm tươi.", color: "sage", icon: "♧", tag: "Góc xanh" },
-  { name: "Móc khóa Mây Nhỏ", category: "Phụ kiện", price: "55.000đ", description: "Một món phụ kiện xinh để tìm chìa khóa dễ hơn.", color: "lavender", icon: "☁", tag: "Món xinh" },
+  { name: "Bitcoin", symbol: "BTC", category: "Bitcoin", description: "Tài sản số đầu tiên, thường được gọi là BTC.", color: "bitcoin", icon: "₿" },
+  { name: "Ethereum", symbol: "ETH", category: "Altcoin", description: "Tài sản gốc của mạng lưới Ethereum.", color: "ethereum", icon: "Ξ" },
+  { name: "Tether", symbol: "USDT", category: "Stablecoin", description: "Stablecoin được thiết kế để bám theo giá trị USD.", color: "tether", icon: "₮" },
+  { name: "USD Coin", symbol: "USDC", category: "Stablecoin", description: "Stablecoin được thiết kế để bám theo giá trị USD.", color: "usdc", icon: "$" },
+  { name: "Solana", symbol: "SOL", category: "Altcoin", description: "Tài sản gốc của mạng lưới Solana.", color: "solana", icon: "S" },
+  { name: "BNB", symbol: "BNB", category: "Altcoin", description: "Tài sản số của hệ sinh thái BNB Chain.", color: "bnb", icon: "◆" },
+  { name: "XRP", symbol: "XRP", category: "Altcoin", description: "Tài sản số liên kết với sổ cái XRP Ledger.", color: "xrp", icon: "✕" },
+  { name: "Toncoin", symbol: "TON", category: "Altcoin", description: "Tài sản gốc của mạng lưới TON.", color: "ton", icon: "◇" },
 ];
 
 const grid = document.querySelector("#product-grid");
@@ -21,26 +21,26 @@ function renderProducts() {
   const query = searchInput.value.trim().toLocaleLowerCase("vi");
   const visibleProducts = products.filter((product) => {
     const matchesCategory = activeCategory === "Tất cả" || product.category === activeCategory;
-    const text = `${product.name} ${product.category} ${product.description}`.toLocaleLowerCase("vi");
+    const text = `${product.name} ${product.symbol} ${product.category} ${product.description}`.toLocaleLowerCase("vi");
     return matchesCategory && text.includes(query);
   });
 
   grid.innerHTML = visibleProducts.map((product, index) => `
     <article class="product-card" style="--delay: ${index * 40}ms">
       <div class="product-image image-${product.color}">
-        <span class="product-tag">${product.tag}</span>
+        <span class="product-tag">Ví dụ</span>
         <span class="product-illustration" aria-hidden="true">${product.icon}</span>
         <span class="decoration decoration-one" aria-hidden="true">✦</span>
         <span class="decoration decoration-two" aria-hidden="true">✳</span>
-        <span class="sample-label">Ảnh minh họa</span>
+        <span class="sample-label">Danh mục tham khảo</span>
       </div>
       <div class="product-info">
-        <div class="product-title"><h3>${product.name}</h3><span>${product.price}</span></div>
+        <div class="product-title"><h3>${product.name}</h3><span>${product.symbol}</span></div>
         <p>${product.description}</p><small>${product.category}</small>
       </div>
     </article>
   `).join("");
-  count.textContent = `${visibleProducts.length} món đồ`;
+  count.textContent = `${visibleProducts.length} tài sản`;
   emptyState.hidden = visibleProducts.length !== 0;
   grid.hidden = visibleProducts.length === 0;
 }
